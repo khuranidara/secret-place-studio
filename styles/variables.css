@@ -1,0 +1,14 @@
+:root {
+    /* Цвета */
+    --background-color: rgba(14, 32, 55, 1);
+    --header-bg-color: rgba(6, 12, 20, 1);
+    --text-color: #fff;
+    --accent-color: rgba(131, 221, 250, 1);
+    --fill-color: #fff;
+    --blue-color: blue;
+
+    /* Шрифты */
+    --font-family: 'FranklinGothicMedium', 'ArialNarrow', Arial, sans-serif;
+
+    /* Отступы */
+}
