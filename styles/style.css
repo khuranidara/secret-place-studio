@@ -53,7 +53,7 @@ body {
 .header__nav {
     display: flex;
     flex-wrap: wrap;
- }
+}
 
 .nav__list {
     font-size: 13px;
@@ -237,4 +237,102 @@ body {
 
 ::-webkit-scrollbar {
     width: 8px;
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    .header__title {
+        font-size: 37px;
+    }
+
+    .nav__list {
+        display: flex;
+        font-size: 25px;
+        flex-direction: row;
+    }
+
+    .nav__item {
+        margin-right: 5px;
+        margin-bottom: 2px;
+    }
+
+    .landing-title {
+        font-size:170px;
+        letter-spacing: -30px;
+        text-align: center;
+        margin-bottom: -45px;
+    }
+    
+    .landing-video {
+        width:340px;
+        height: 250px;
+    }
+
+    .landing-buttons {
+        margin-top: 40px;
+    }
+    
+    .landing-button {
+        width: 100px;
+        height: 90px;
+    }
+
+    .landing-button svg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .landing-video {
+        width:640px;
+        height: 410px;
+        border-radius: 20px;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        margin-left: 5px;
+    }
+
+    .card {
+        width: 370px;
+        height: 550px;
+        margin-right: 0;
+    }
+
+    .card-img {
+        height: 60%;
+    }
+    
+    .card-img__image {
+        height: 100%;
+    }
+    
+    .card-details {
+        height: 40%;
+    }
+
+    .card-title {
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
+    
+    .card-desc {
+        font-size: 19px;
+    }
+
+    .footer .social-icons {
+        margin-bottom: 0;
+    }
+
+    .social-icons__links {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-icons__links__svg {
+        width: 50px;
+        height: 50px;
+    }
+
 }
