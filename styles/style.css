@@ -62,7 +62,6 @@ body {
 }
 
 .landing {
-    background-image: url('./images/squad_surv.jpg');
     background-size: cover;
     background-position: center;
     height: calc(100vh - 95px);
