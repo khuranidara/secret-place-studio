@@ -62,7 +62,7 @@ body {
 }
 
 .landing {
-    background-image: url('/images/among-us.jpeg');
+    background-image: url('/images/squad_surv.jpg');
     background-size: cover;
     background-position: center;
     height: calc(100vh - 95px);
@@ -71,7 +71,6 @@ body {
     align-items: center;
     padding: 0 20px;
     flex-direction: column;
-    gap: 15px;
 }
 
 .landing-title {
@@ -83,7 +82,8 @@ body {
 }
 
 .landing-video {
-    width:340px;
+    justify-self: center;
+    width: 335px;
     height: 250px;
     border: none;
     border-radius: 10px;
@@ -126,7 +126,7 @@ body {
     scrollbar-width: none;
     white-space: nowrap;
     margin-top: 30px;
-    margin-left: 25px;
+    margin-left: 20px;
     margin-bottom: 40px;
 }
 
@@ -135,8 +135,8 @@ body {
 }
 
 .card {
-    width: 320px;
-    height: 430px;
+    width: 330px;
+    height: 550px;
     text-align: center;
     border: 1px solid var(--fill-color);
     border-radius: 10px;
@@ -151,7 +151,7 @@ body {
 
 .card-img {
     border-bottom: 1px solid var(--fill-color);
-    height: 65%;
+    height: 60%;
 }
 
 .card-img__image {
@@ -160,7 +160,7 @@ body {
 
 .card-details {
     width: 100%;
-    height: 35%;
+    height: 40%;
     padding: 15px;
     font-family: var(--font-family);
     color: var(--text-color);
@@ -172,13 +172,13 @@ body {
 }
 
 .card-title {
-    font-size: 15px;
+    font-size: 18px;
     align-self: center;
     font-weight: bold;
 }
 
 .card-desc {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: normal;
     text-align: justify;
     text-wrap: wrap;
