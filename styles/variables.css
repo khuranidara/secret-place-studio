@@ -6,6 +6,7 @@
     --accent-color: rgba(131, 221, 250, 1);
     --fill-color: #fff;
     --blue-color: blue;
+    --active-el: red;
 
     /* Шрифты */
     --font-family: 'FranklinGothicMedium', 'ArialNarrow', Arial, sans-serif;
