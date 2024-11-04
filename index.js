@@ -1,26 +1,56 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+  menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('visible');
+      if (menu.classList.contains('visible')) {
+        menuToggle.classList.add('cross');
+    } else {
+        menuToggle.classList.remove('cross');
+    }
+  });
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+  const buttons = document.querySelectorAll('.button');
+  const pulseDuration = 1500;
+  const pauseDuration = 5000;
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+  function triggerDoublePulse(button) {
+    button.classList.add('pulsing');
+    setTimeout(() => {
+      button.classList.remove('pulsing');
+      setTimeout(() => {
+        button.classList.add('pulsing');
+        setTimeout(() => {
+          button.classList.remove('pulsing');
+        }, pulseDuration);
+      }, 100);
+    }, pulseDuration);
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+
+  buttons.forEach(button => {
+    setInterval(() => {
+      triggerDoublePulse(button);
+    }, 2 * pulseDuration + pauseDuration);
+  });
+
+  const backToTopButton = document.getElementById('back-to-top');
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+});
+
+document.addEventListener('scroll', function() {
+  const parallaxSection = document.querySelector('main');
+  if (parallaxSection) {
+    const scrollPosition = window.pageYOffset;
+    // Эффект параллакс
+    const offset = scrollPosition * 0.00001;
+    parallaxSection.style.backgroundPositionY = `${offset}px`;
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+});
