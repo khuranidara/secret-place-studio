@@ -42,15 +42,4 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   });
-
-});
-
-document.addEventListener('scroll', function() {
-  const parallaxSection = document.querySelector('main');
-  if (parallaxSection) {
-    const scrollPosition = window.pageYOffset;
-    // Эффект параллакс
-    const offset = scrollPosition * 0.00001;
-    parallaxSection.style.backgroundPositionY = `${offset}px`;
-  }
 });

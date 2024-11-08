@@ -34,8 +34,8 @@
   }
 
   .header__burger-menu {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border: none;
     background-color: transparent;
     background-image: url('/images/icons8-меню-50.png');
@@ -100,15 +100,27 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-flow: column;
     gap: 10px;
-    background-image: url('/images/squad_surv.jpg');
+    background-image: url('/images/squad_surv_background.svg');
+    position: relative;
     z-index: 0;
+  }
+
+  .main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: -1;
   }
 
   .main__title-container {
@@ -215,19 +227,19 @@
     font-weight: light;
   }
   
-  .footer__icons-credit {
+  .footer__legal-links {
     font-size: 12px;
     color: #999;
     text-align: center;
     margin-top: 10px;
   }
   
-  .footer__icons-credit a {
+  .footer__legal-links a {
     color: #999;
     text-decoration: none;
   }
   
-  .footer__icons-credit a:hover {
+  .footer__legal-links a:hover {
     text-decoration: underline;
   }
   
